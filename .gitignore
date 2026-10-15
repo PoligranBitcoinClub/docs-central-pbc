@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.tmp
+~$*.docx
+~$*.pptx
+*.log
+.venv/
+node_modules/
