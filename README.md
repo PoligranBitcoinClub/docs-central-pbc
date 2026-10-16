@@ -1,15 +1,36 @@
-# docs-central-pbc
+## <div align="center"> 💻 Poligran ₿itcoin Club </div>
+<div align="center">"Soberanía financiera, resistencia a la censura, libertad"</div>
 
-> **Poligran ₿itcoin Club** - Repositorio central de documentacion técnica, tesis, manifiestos y marcos legales "₿itcoin Only".
+<div align="center">
+  <img src="https://img.shields.io/badge/GitHub_Education-Recurso_Certificado-blue?logo=github" />
+  <img src="https://img.shields.io/badge/OS-Kali_Linux-blue?logo=kali-linux" />
+</div>
 
+---
 ## 🛡️ Visión e Impacto
 Iniciativa académica de investigacion y desarrollo territorial enfocada en la auto-custodia, inconfiscabilidad y soberania financiera para el Sur Global. Afiliado a la red global de **Bitcoin Students Network (BSN)** e inspirado en el **Cornell Bitcoin Club** - **MIT Bitcoin Club** **y otros referentes de primer nivel**
 
-## 📂 Directorio del Repositorio
-- `docs/01-manifiesto`: Declaración de principios, propuesta institucional y vinculación internacional (Oslo Freedom Forum).
-- `docs/02-estado-del-arte`: Guías del Cornell Bitcoin Club (CBC), marcos teóricos y matrices conceptuales.
-- `docs/03-tesis`: Investigación académica y capítulos de tesis de mi pregrado en Ingeniería de Software.
-- `docs/04-workshops`: Material didáctico para laboratotios y talleres de Bitcoin, Lightning Network, Liquid, ARK, Fedi y Rootstock.
-- `docs/05-registros-historicos`: Registros de IA (Gemini/Copilot) y bitácoras de desarrollo.
-- `legal-and-contracts/`: Fichas técnicas y contratos de respaldo (activos reales, agua, tierra).
-- `pitches-and-models/`: Presentaciones ejecutivas y modelos de sostenibilidad económica.
+## 🛡️ Filosofía de Soberanía
+Iniciativa académica y territorial del Politécnico Grancolombiano que promueve el uso de Bitcoin y tecnologías abiertas para empoderar comunidades, conectar talentos emergentes y construir soluciones reales desde el sur global.
+
+### Pilares Fundamentales:
+* **Resistencia a la Censura:** Bitcoin como escudo para el campesinado colombiano.
+* **Auto-custodia:** Promovemos el principio "Not your keys, not your coins".
+* **Desarrollo Local:** Construcción de soluciones como **CampoAmigo** para el sector rural.
+
+---
+
+## 📂 Estructura del Repositorio
+- `/docs`: Documentación, planes y referencias (Incluye tesis en texto plano).
+- `/src`: Código de aplicaciones o prototipos.
+- `/assets`: Imágenes y recursos gráficos.
+- `/workshops`: Material para talleres educativos.
+- `/piloto-campoamigo`: Proyecto rural piloto.
+
+---
+
+## 👤 Autor
+**Diego ₿ayardo Santacruz Jurado** |
+Director & Cofundador **@Xiima-Labs** | Estudiante Ing. Software  
+📫 [@ConsejeroDiego](https://x.com/ConsejeroDiego)  
+✉️ dsantacruz@poligran.edu.co
