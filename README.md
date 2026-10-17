@@ -24,8 +24,6 @@ Iniciativa académica y territorial del Politécnico Grancolombiano que promueve
 - `/docs`: Documentación, planes y referencias (Incluye tesis en texto plano).
 - `/src`: Código de aplicaciones o prototipos.
 - `/assets`: Imágenes y recursos gráficos.
-- `/workshops`: Material para talleres educativos.
-- `/piloto-campoamigo`: Proyecto rural piloto.
 
 ---
 

@@ -1,0 +1,13 @@
+src/web/
+├── index.html              # Página principal (Landing Page)
+├── assets/                 # Recursos estáticos
+│   ├── img/                # Logos (LogoPoligran), imágenes e íconos
+│   └── fonts/              # Tipografías personalizadas
+├── css/                    # Hojas de estilo (o estilos compilados)
+│   └── styles.css
+├── js/                     # Scripts de interacción y lógica
+│   └── main.js
+└── sections/               # Subpáginas o módulos del sitio
+    ├── manifiesto.html     # Doctrina y visión Bitcoin-Only
+    ├── proyectos.html      # CampoAmigo Wallet, ReforStar, etc.
+    └── investigacion.html  # Avances académicos y LSD-T
