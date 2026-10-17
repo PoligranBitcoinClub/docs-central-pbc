@@ -1,22 +1,260 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Poligran Bitcoin Club</title>
-  <style>
-    body { font-family: sans-serif; padding: 2rem; background: #f7f7f7; }
-    h1 { color: #333; }
-    .card { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-top: 1rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poligran Bitcoin Club | Soberanía Digital y Territorio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bitcoin: '#F7931A',
+                        bitcoinHover: '#E88210',
+                        dark: '#0D1117', /* Estilo GitHub Dark */
+                        darker: '#010409',
+                        panel: '#161B22'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap');
+        
+        body {
+            background-color: #010409;
+            color: #C9D1D9;
+        }
+        
+        .bg-grid {
+            background-size: 30px 30px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(247, 147, 26, 0.3);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-grid antialiased selection:bg-bitcoin selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-darker/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <!-- Logo Placeholder (Isotipo Escudo/Nodo) -->
+                    <div class="w-8 h-8 rounded bg-panel border border-gray-700 flex items-center justify-center">
+                        <span class="text-bitcoin font-bold font-heading">₿</span>
+                    </div>
+                    <span class="font-heading font-bold text-xl text-white tracking-tight">Poligran<span class="text-bitcoin">Bitcoin</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#manifiesto" class="hover:text-bitcoin transition px-3 py-2 rounded-md text-sm font-medium">Manifiesto</a>
+                        <a href="#proyectos" class="hover:text-bitcoin transition px-3 py-2 rounded-md text-sm font-medium">Proyectos L2</a>
+                        <a href="#sur-global" class="hover:text-bitcoin transition px-3 py-2 rounded-md text-sm font-medium">Sur Global</a>
+                        <a href="https://github.com/PoligranBitcoinClub" target="_blank" class="bg-panel hover:bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-md text-sm font-mono transition flex items-center gap-2">
+                            <span>{</span> GitHub <span>}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow">
+        <section class="relative pt-20 pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bitcoin/10 border border-bitcoin/20 text-bitcoin text-xs font-mono mb-6">
+                        <span class="w-2 h-2 rounded-full bg-bitcoin animate-pulse"></span>
+                        Nodo Académico · Nariño, Colombia
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-6 tracking-tight glow-text">
+                        Ingeniería Soberana para el <span class="text-bitcoin">Sur Global</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Semillero de investigación del Politécnico Grancolombiano enfocado estrictamente en infraestructuras Bitcoin L1/L2, privacidad y herramientas del común. Inspirados por MIT, Cornell y Plan ₿ Lugano.
+                    </p>
+                    <div class="flex justify-center gap-4 flex-col sm:flex-row">
+                        <a href="#manifiesto" class="bg-bitcoin hover:bg-bitcoinHover text-darker font-bold py-3 px-8 rounded-lg transition shadow-[0_0_15px_rgba(247,147,26,0.3)]">
+                            Leer Manifiesto
+                        </a>
+                        <a href="#proyectos" class="bg-panel hover:bg-gray-800 border border-gray-700 text-white font-medium py-3 px-8 rounded-lg transition">
+                            Explorar Proyectos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elemento decorativo tecnológico -->
+            <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-bitcoin/50 to-transparent"></div>
+        </section>
+
+        <!-- Doctrina y Manifiesto -->
+        <section id="manifiesto" class="py-20 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-heading font-bold text-white mb-6">Doctrina: Bitcoin, no crypto.</h2>
+                        <div class="space-y-4 text-gray-400">
+                            <p>El <strong>Poligran Bitcoin Club (PBC)</strong> se constituye como un núcleo autónomo de investigación aplicada. Nuestro enfoque es purista y radical: estudiamos Bitcoin como un protocolo inmutable de comunicación de valor y el "Internet del Dinero".</p>
+                            <p>Rechazamos la narrativa extractiva del <em>trading</em> convencional. Construimos herramientas para defender la economía popular, proteger el trabajo campesino frente a la inflación y crear vías de inclusión sin depender de monopolios financieros o infraestructura corporativa centralizada.</p>
+                            <div class="mt-6 border-l-2 border-bitcoin pl-4 italic text-sm text-gray-500">
+                                "La soberanía digital desplaza la seguridad del plano jurídico-institucional hacia el plano inmutable de las leyes físicas de la termodinámica."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Cards de Pilares -->
+                        <div class="bg-panel p-6 rounded-lg border border-gray-800 hover:border-bitcoin/50 transition">
+                            <div class="text-bitcoin mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3 class="font-bold text-white mb-2">Lightning Network</h3>
+                            <p class="text-sm text-gray-400">Micropagos eficientes y enrutamiento ágil para microcomercio local.</p>
+                        </div>
+                        <div class="bg-panel p-6 rounded-lg border border-gray-800 hover:border-bitcoin/50 transition">
+                            <div class="text-bitcoin mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            </div>
+                            <h3 class="font-bold text-white mb-2">Liquid Network</h3>
+                            <p class="text-sm text-gray-400">Transacciones confidenciales y gestión soberana de activos comunitarios.</p>
+                        </div>
+                        <div class="bg-panel p-6 rounded-lg border border-gray-800 hover:border-bitcoin/50 transition">
+                            <div class="text-bitcoin mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                            </div>
+                            <h3 class="font-bold text-white mb-2">Soberanía Termodinámica</h3>
+                            <p class="text-sm text-gray-400">Nodos Off-grid, Linux, BTCPay Server y mitigación de fallos IP.</p>
+                        </div>
+                        <div class="bg-panel p-6 rounded-lg border border-gray-800 hover:border-bitcoin/50 transition">
+                            <div class="text-bitcoin mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                            </div>
+                            <h3 class="font-bold text-white mb-2">Visión Global</h3>
+                            <p class="text-sm text-gray-400">De Taminango a Oslo y Praga. Conectando lo local con el mundo libre.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perspectiva Sur Global -->
+        <section id="sur-global" class="py-20 border-y border-gray-800 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-heading font-bold text-white mb-4">Desde Nariño para el Mundo</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">No necesitas gran capital ni hardware especializado para empezar a ejercer tu libertad. La educación técnica es el primer paso hacia la inconfiscabilidad.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6">
+                        <div class="font-mono text-bitcoin text-xl mb-2">01.</div>
+                        <h4 class="text-lg font-bold text-white mb-2">El Camino Académico</h4>
+                        <p class="text-sm text-gray-400">Reconocemos que recorrer un camino de aprendizaje organizado tiene más valor inicial que poseer hardware de minería. La organización de repositorios y documentación bajo estándares Linux Foundation es nuestra base.</p>
+                    </div>
+                    <div class="p-6 border-y md:border-y-0 md:border-x border-gray-800">
+                        <div class="font-mono text-bitcoin text-xl mb-2">02.</div>
+                        <h4 class="text-lg font-bold text-white mb-2">La Herramienta del Común</h4>
+                        <p class="text-sm text-gray-400">Estudiamos las dinámicas geopolíticas (EEUU, Rusia, Lugano, El Salvador) para entender cómo Bitcoin actúa como un escudo defensivo para economías emergentes y productores agrarios locales.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="font-mono text-bitcoin text-xl mb-2">03.</div>
+                        <h4 class="text-lg font-bold text-white mb-2">Minga Digital</h4>
+                        <p class="text-sm text-gray-400">Utilizamos soluciones de código abierto para dotar al territorio de un blindaje estructural contra la extracción de valor por intermediarios. La riqueza generada en el sur, se protege en el sur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" class="py-20 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-12 border-b border-gray-800 pb-4">
+                    <h2 class="text-3xl font-heading font-bold text-white">Líneas de Desarrollo</h2>
+                    <a href="https://github.com/PoligranBitcoinClub" class="text-bitcoin hover:text-white transition text-sm font-mono flex items-center gap-1">
+                        Ver Repositorios <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Proyecto 1 -->
+                    <div class="bg-panel rounded-lg border border-gray-800 overflow-hidden group">
+                        <div class="h-2 bg-gradient-to-r from-bitcoin to-yellow-500"></div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-white">CampoAmigo Wallet</h3>
+                                <span class="bg-gray-800 text-xs px-2 py-1 rounded font-mono text-gray-300">Liquid / L2</span>
+                            </div>
+                            <p class="text-gray-400 mb-6">Investigación y desarrollo de billeteras soberanas con interfaz de usuario ultrasimplificada para comunidades rurales, facilitando la inclusión financiera sin educación digital previa.</p>
+                            <div class="font-mono text-xs text-gray-500">
+                                <code>> Status: En desarrollo activo</code><br>
+                                <code>> Stack: Flutter, Liquid Network, L-BTC</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="bg-panel rounded-lg border border-gray-800 overflow-hidden group">
+                        <div class="h-2 bg-gradient-to-r from-green-500 to-emerald-700"></div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-white">Soberanía Termodinámica</h3>
+                                <span class="bg-gray-800 text-xs px-2 py-1 rounded font-mono text-gray-300">Hardware</span>
+                            </div>
+                            <p class="text-gray-400 mb-6">Despliegue de nodos independientes, administración de sistemas Linux seguros y enrutamiento de paquetes a través de redes Mesh y radiocomunicación en zonas con silencio IP.</p>
+                            <div class="font-mono text-xs text-gray-500">
+                                <code>> Status: Fase de pruebas en laboratorio</code><br>
+                                <code>> Stack: Ubuntu, Docker, BTCPay Server, LoRa</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-bitcoin font-bold font-heading text-2xl">₿</span>
+                    <span class="font-heading font-bold text-gray-300">Poligran Bitcoin Club</span>
+                </div>
+                <div class="text-gray-500 text-sm text-center md:text-left">
+                    <p>Arquitectura de Propósito Especial (APS). Sur de Colombia, Nariño.</p>
+                    <p class="mt-1">Inspirados por <a href="https://bitcoin.mit.edu/" class="text-gray-400 hover:text-bitcoin transition">MIT</a>, <a href="https://www.cornellbitcoinclub.org/" class="text-gray-400 hover:text-bitcoin transition">Cornell</a> & <a href="https://planb.lugano.ch/planb-forum/" class="text-gray-400 hover:text-bitcoin transition">Plan ₿ Lugano</a>.</p>
+
   <h1>🧠Poligran Bitcoin Club</h1>
   <div class="card">
     <p>Este es el sitio oficial del club estudiantil que promueve el aprendizaje, uso e impacto social de Bitcoin.</p>
     <p><strong>Coordinador:</strong> Diego Santacruz</p>
     <p><strong>Enlace:</strong> <a href="https://x.com/ConsejeroDiego" target="_blank">@ConsejeroDiego</a></p>
   </div>
-</body>
-</html>
+
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://github.com/PoligranBitcoinClub" class="text-gray-400 hover:text-white transition">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
